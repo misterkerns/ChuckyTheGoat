@@ -4,7 +4,7 @@ export default function Navbar() {
     return (
         <div>
             <div className='content-viewer'>
-                <h1>yerrr</h1>
+                <h1>Home</h1>
             </div>
         </div>
     );

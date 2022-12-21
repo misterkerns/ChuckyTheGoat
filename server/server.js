@@ -3,7 +3,14 @@ const api = express();
 const mongoose = require('mongoose');
 mongoose.set('strictQuery', false);
 const cors = require('cors');
+
+const productRoutes = require('./routes/productRoutes');
+
 api.use(cors());
+
+api.use(express.json());
+api.use(productRoutes);
+
 const path = require('path');
 
 require('dotenv').config({ path: './config.env' });
@@ -20,7 +27,6 @@ mongoose.connect(
 .then(() => console.log('connected to mongodb'))
 .catch((err) => console.log(err));
 
-api.use(express.static(path.resolve(__dirname, "./client/build")));
-api.get("*", function (request, response) {
-    response.sendFile(path.resolve(__dirname, "./client/build", "index.html"));
-  });
+api.listen(port, () => {
+    console.log(`server running: ${port}`)
+})
