@@ -2,8 +2,11 @@ import React from 'react';
 import './styles/App.css'
 import { Route, Routes } from 'react-router-dom';
 
-import Navbar from './components/navbar';
-import Home from './components/home';
+import Navbar from './components/sections/navbar';
+import Home from './components/pages/home';
+import Products from './components/pages/products';
+import Tasks from './components/pages/tasks';
+import Articles from './components/pages/articles';
 
 const App = () => {
 	return (
@@ -11,6 +14,9 @@ const App = () => {
 			<Navbar />
 			<Routes>
 				<Route exact path='/' element={<Home />} />
+				<Route path='/products' element={<Products />} />
+				<Route path='/tasks' element={<Tasks />} />
+				<Route path='/articles' element={<Articles />} />
 			</Routes>
 		</div>
 	);

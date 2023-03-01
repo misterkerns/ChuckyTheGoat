@@ -1,21 +1,23 @@
 const express = require('express');
-const api = express();
+const app = express();
+const cors = require('cors');
 const mongoose = require('mongoose');
 mongoose.set('strictQuery', false);
-const cors = require('cors');
-
-const productRoutes = require('./routes/productRoutes');
-
-api.use(cors());
-
-api.use(express.json());
-api.use(productRoutes);
-
-const path = require('path');
-
 require('dotenv').config({ path: './config.env' });
+const port = process.env.port || 8080;
 
-const port = process.env.port || 5000;
+const articleRoutes = require('./routes/articleRoutes');
+const productRoutes = require('./routes/productRoutes');
+const taskRoutes = require('./routes/taskRoutes');
+const searchRoutes = require('./routes/searchRoutes');
+
+app.use(cors());
+app.use(express.json());
+
+app.use('/articles', articleRoutes);
+app.use('/products', productRoutes);
+app.use('/tasks', taskRoutes);
+app.use('/searches', searchRoutes);
 
 const mongoDB = process.env.ATLAS_URI;
 mongoose.connect(
@@ -27,6 +29,6 @@ mongoose.connect(
 .then(() => console.log('connected to mongodb'))
 .catch((err) => console.log(err));
 
-api.listen(port, () => {
+app.listen(port, () => {
     console.log(`server running: ${port}`)
 })
