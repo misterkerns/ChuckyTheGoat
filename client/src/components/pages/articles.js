@@ -3,7 +3,6 @@ import React from 'react';
 import CreateArticle from '../sections/createArticle';
 import ArticleList from '../sections/articleList';
 
-
 export default function Articles() {
     return (
         <div>

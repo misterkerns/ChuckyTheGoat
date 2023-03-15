@@ -53,6 +53,7 @@ export default function SearchList() {
                 <Search
                     search={search}
                     deleteSearch={() => deleteSearch(search._id)}
+                    key={search._id}
                 />
             );
         });
