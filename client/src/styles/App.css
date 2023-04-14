@@ -139,3 +139,19 @@ div {
     color: #30ba8f;
     transition: all 2s;
 }
+
+.wholesale-product-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.wholesale-product-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.wholesale-product-row span {
+    width: 150px;;
+}

@@ -19,11 +19,11 @@ export default function Navbar() {
                 <Link className='link' to='/tasks'>
                     TASKS
                 </Link>
-                <Link className='link' to='/articles'>
-                    ARTICLES
-                </Link>
                 <Link className='link' to='/notes'>
                     NOTES
+                </Link>
+                <Link className='link' to='/wholesale'>
+                    WHOLESALE
                 </Link>
             </div>
         </div>

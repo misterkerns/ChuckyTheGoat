@@ -6,7 +6,6 @@ mongoose.set('strictQuery', false);
 require('dotenv').config({ path: './config.env' });
 const port = process.env.port || 8080;
 
-const articleRoutes = require('./routes/articleRoutes');
 const noteRoutes = require('./routes/noteRoutes');
 const productRoutes = require('./routes/productRoutes');
 const taskRoutes = require('./routes/taskRoutes');
@@ -15,7 +14,6 @@ const searchRoutes = require('./routes/searchRoutes');
 app.use(cors());
 app.use(express.json());
 
-app.use('/articles', articleRoutes);
 app.use('/notes', noteRoutes);
 app.use('/products', productRoutes);
 app.use('/tasks', taskRoutes);

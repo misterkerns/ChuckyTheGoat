@@ -6,8 +6,8 @@ import Navbar from './components/sections/navbar';
 import Home from './components/pages/home';
 import Products from './components/pages/products';
 import Tasks from './components/pages/tasks';
-import Articles from './components/pages/articles';
 import Notes from './components/pages/notes';
+import Wholesale from './components/pages/wholesale';
 
 const App = () => {
 	return (
@@ -17,8 +17,8 @@ const App = () => {
 				<Route exact path='/' element={<Home />} />
 				<Route path='/products' element={<Products />} />
 				<Route path='/tasks' element={<Tasks />} />
-				<Route path='/articles' element={<Articles />} />
 				<Route path='/notes' element={<Notes />} />
+				<Route path='/wholesale' element={<Wholesale />} />
 			</Routes>
 		</div>
 	);
