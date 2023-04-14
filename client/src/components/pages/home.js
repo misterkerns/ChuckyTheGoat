@@ -7,8 +7,6 @@ export default function Home() {
         <div>
             <div className='content-viewer'>
                 <h2 className='page-title'>Home</h2>
-                <h3>Articles:</h3>
-                <ArticleList />
                 <h3>Tasks:</h3>
                 <TaskList />
             </div>
