@@ -9,6 +9,7 @@ import Tasks from './components/pages/tasks';
 import Notes from './components/pages/notes';
 import Wholesale from './components/pages/wholesale';
 import Shipping from './components/pages/shipping';
+import Zeros from "./components/pages/zeros"
 
 const App = () => {
 	return (
@@ -19,6 +20,7 @@ const App = () => {
 				<Route path='/products' element={<Products />} />
 				<Route path='/tasks' element={<Tasks />} />
 				<Route path='/notes' element={<Notes />} />
+				<Route path='/zeros' element={<Zeros />} />
 				<Route path='/wholesale' element={<Wholesale />} />
 				<Route path='/shipping' element={<Shipping />} />
 			</Routes>

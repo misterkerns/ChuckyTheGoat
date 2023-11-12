@@ -22,6 +22,9 @@ export default function Navbar() {
                 <Link className='link' to='/notes'>
                     NOTES
                 </Link>
+                <Link className='link' to='/zeros'>
+                    ZEROS
+                </Link>
                 <Link className='link' to='/wholesale'>
                     WHOLESALE
                 </Link>

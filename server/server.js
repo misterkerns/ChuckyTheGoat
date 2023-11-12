@@ -10,6 +10,7 @@ const noteRoutes = require('./routes/noteRoutes');
 const productRoutes = require('./routes/productRoutes');
 const taskRoutes = require('./routes/taskRoutes');
 const searchRoutes = require('./routes/searchRoutes');
+const zeroRoutes = require('./routes/zeroRoutes');
 
 app.use(cors());
 app.use(express.json());
@@ -18,6 +19,7 @@ app.use('/notes', noteRoutes);
 app.use('/products', productRoutes);
 app.use('/tasks', taskRoutes);
 app.use('/searches', searchRoutes);
+app.use('/zeros', zeroRoutes);
 
 const mongoDB = process.env.ATLAS_URI;
 mongoose.connect(
