@@ -5,9 +5,9 @@ const Product = require('../models/product');
 // Create Product
 exports.create_product = (req, response) => {
     let myobj = {
-        product_sku: req.body.product_sku,
-        product_name: req.body.product_name,
-        product_quantity: req.body.product_quantity
+        sku: req.body.sku,
+        name: req.body.name,
+        location: req.body.location
     }
     Product.create(myobj, (err, res) => {
         if (err) throw err;
@@ -39,9 +39,9 @@ exports.get_product_byid = (req, res) => {
 exports.update_product_byid = (req, response) => {
     let myquery = { _id: ObjectId(req.params.id) };
     let newvalues = {
-        product_sku: req.body.product_sku,
-        product_name: req.body.product_name,
-        product_quantity: req.body.product_quantity
+    sku: req.body.sku,
+    name: req.body.name,
+    quantity: req.body.quantity
     };
     Product.updateOne(myquery, newvalues, (req, res) => {
         if (err) throw err;

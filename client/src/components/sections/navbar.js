@@ -25,6 +25,9 @@ export default function Navbar() {
                 <Link className='link' to='/wholesale'>
                     WHOLESALE
                 </Link>
+                <Link className='link' to='/shipping'>
+                    SHIPPING
+                </Link>
             </div>
         </div>
     );

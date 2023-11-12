@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 const Task = (props) => (
     <div className='tile'>
         <p>{props.task.content}</p>
-        <p>{props.task.deadline}</p>
         <p>
             <Link className='btn btn-link' to={`/tasks/${props.task._id}`}>Open</Link> |
             <button className='btn btn-link' onClick={() => {

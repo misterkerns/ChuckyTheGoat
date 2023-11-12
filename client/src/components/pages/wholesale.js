@@ -1,9 +1,18 @@
 import React from 'react';
 
-export default function Notes() {
+export default function Wholesale() {
     return (
         <div>
             <div className='content-viewer'>
+            <h2 className='page-title'>Wholesale</h2>
+            <div className='cheat-sheet-viewer'>
+                <div className='love-letter-cheat-sheet'>
+                    <p>Welcome to the Chez Gagné Family! We look forward to working with you!</p>
+                    <p>Cheers & XOXO,</p>
+                    <p>The Chez Gagné Babes</p>
+                </div>
+
+            <div className='wholesale-packing-cheat-sheet'>
                 <h2 className='page-title'>Wholesale Packing Cheat Sheet</h2>
                 <div className='wholesale-product-title'>
                     <span>WINE [ upright, bubble, peanuts ]</span>
@@ -281,6 +290,8 @@ export default function Notes() {
                 <div className='wholesale-product-row-note'>
                     <span>* LABEL TESTERS</span>
                 </div>
+            </div>
+            </div>
             </div>
         </div>
     );

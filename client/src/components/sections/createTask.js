@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router';
 export default function CreateTask() {
     const [form, setForm] = useState({
         content: '',
-        deadline: '',
     });
     const navigate = useNavigate();
 
@@ -32,7 +31,6 @@ export default function CreateTask() {
 
         setForm({
             content: '',
-            deadline: '',
         });
         navigate('/tasks');
     }
@@ -49,16 +47,6 @@ export default function CreateTask() {
                         id='content'
                         value={form.content}
                         onChange={(e) => updateForm({ content: e.target.value })}
-                    />
-                </div>
-                <div className='form-group'>
-                    <label htmlFor='deadline'>Deadline: </label>
-                    <input
-                        type='text'
-                        className='form-control'
-                        id='deadline'
-                        value={form.deadline}
-                        onChange={(e) => updateForm({ deadline: e.target.value })}
                     />
                 </div>
                 <div className='form-group'>

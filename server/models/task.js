@@ -4,10 +4,6 @@ const TaskSchema = new mongoose.Schema({
     content: {
         type: String,
         required: true
-    },
-    deadline: {
-        type: String,
-        required: true
     }
 });
 

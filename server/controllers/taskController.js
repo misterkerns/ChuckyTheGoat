@@ -5,7 +5,6 @@ const Task = require('../models/task');
 exports.create_task = (req, response) => {
     let myobj = {
         content: req.body.content,
-        deadline: req.body.deadline
     }
     Task.create(myobj, (err, res) => {
         if (err) throw err;
@@ -38,7 +37,6 @@ exports.update_task_byid = (req, response) => {
     let myquery = { _id: ObjectId(req.params.id) };
     let newvalues = {
         content: req.body.title,
-        deadline: req.body.deadline
     };
     Task.updateOne(myquery, newvalues, (req, res) => {
         if (err) throw err;

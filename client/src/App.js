@@ -8,6 +8,7 @@ import Products from './components/pages/products';
 import Tasks from './components/pages/tasks';
 import Notes from './components/pages/notes';
 import Wholesale from './components/pages/wholesale';
+import Shipping from './components/pages/shipping';
 
 const App = () => {
 	return (
@@ -19,6 +20,7 @@ const App = () => {
 				<Route path='/tasks' element={<Tasks />} />
 				<Route path='/notes' element={<Notes />} />
 				<Route path='/wholesale' element={<Wholesale />} />
+				<Route path='/shipping' element={<Shipping />} />
 			</Routes>
 		</div>
 	);
