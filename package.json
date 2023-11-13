@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "init-server": "npm install --prefix server && npm start --prefix server",
-    "init-client": "npm heroku-postbuild && npm start --prefix client",
-    "heroku-postbuild": "cd client && npm install && npm run build",
+    "init-client": "npm start --prefix client",
+    "heroku-postbuild": "npm install && cd client && npm install && npm run build && cd ../server && npm install",
     "start": "concurrently \"npm run init-client\" \"npm run init-server\""
   },
   "repository": {
