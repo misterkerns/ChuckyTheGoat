@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "init-server": "npm start --prefix server",
     "init-client": "npm start --prefix client",
-    "start": "concurrently \"npm run init-client\" \"npm run init-server\""
+    "heroku-postbuild": "cd client && npm install && npm run build",
+    "start": "concurrently \"npm heroku-postbuild && npm run init-client\" \"npm run init-server\""
   },
   "repository": {
     "type": "git",
