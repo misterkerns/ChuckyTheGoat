@@ -22,5 +22,9 @@
   "homepage": "https://github.com/kyledavid716/ChuckyTheGoat#readme",
   "dependencies": {
     "concurrently": "^7.6.0"
+  },
+  "engines": {
+    "npm" : "10.2.3",
+    "node" : "18.17.1"
   }
 }
